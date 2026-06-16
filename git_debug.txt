@@ -1,0 +1,74 @@
+On branch main
+Your branch is up to date with 'old-origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   FarmXChain/src/main/java/com/infosys/farmxchain/config/SecurityConfig.java
+	modified:   FarmXChain/src/main/java/com/infosys/farmxchain/controller/AdminController.java
+	modified:   FarmXChain/src/main/java/com/infosys/farmxchain/controller/UserController.java
+	modified:   FarmXChain/src/main/java/com/infosys/farmxchain/dto/CropDTO.java
+	modified:   FarmXChain/src/main/java/com/infosys/farmxchain/dto/CropRequest.java
+	modified:   FarmXChain/src/main/java/com/infosys/farmxchain/dto/RegisterRequest.java
+	modified:   FarmXChain/src/main/java/com/infosys/farmxchain/dto/UserDTO.java
+	modified:   FarmXChain/src/main/java/com/infosys/farmxchain/entity/Crop.java
+	modified:   FarmXChain/src/main/java/com/infosys/farmxchain/entity/User.java
+	modified:   FarmXChain/src/main/java/com/infosys/farmxchain/security/JwtAuthenticationFilter.java
+	modified:   FarmXChain/src/main/java/com/infosys/farmxchain/service/AuthService.java
+	modified:   FarmXChain/src/main/java/com/infosys/farmxchain/service/BlockchainService.java
+	modified:   FarmXChain/src/main/java/com/infosys/farmxchain/service/CropService.java
+	modified:   FarmXChain/src/main/java/com/infosys/farmxchain/service/UserService.java
+	modified:   FarmXChain/src/main/resources/application.properties
+	modified:   FarmXChain/src/main/resources/contracts/CropRegistry.sol
+	modified:   FarmXChain/src/main/resources/database-setup.sql
+	modified:   frontend/src/App.js
+	modified:   frontend/src/components/CropList.jsx
+	modified:   frontend/src/pages/AdminDashboard.jsx
+	modified:   frontend/src/pages/CropManagement.jsx
+	modified:   frontend/src/pages/Marketplace.jsx
+	modified:   frontend/src/pages/UserManagement.jsx
+	modified:   frontend/src/pages/UserProfile.jsx
+	modified:   frontend/src/services/AdminService.js
+	modified:   frontend/src/services/AuthService.js
+	modified:   frontend/src/services/UserService.js
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	FarmXChain/src/main/java/com/infosys/farmxchain/controller/LogisticsController.java
+	FarmXChain/src/main/java/com/infosys/farmxchain/controller/OrderController.java
+	FarmXChain/src/main/java/com/infosys/farmxchain/dto/OrderDTO.java
+	FarmXChain/src/main/java/com/infosys/farmxchain/dto/OrderRequest.java
+	FarmXChain/src/main/java/com/infosys/farmxchain/dto/ShipmentDTO.java
+	FarmXChain/src/main/java/com/infosys/farmxchain/dto/ShipmentUpdateRequest.java
+	FarmXChain/src/main/java/com/infosys/farmxchain/entity/Order.java
+	FarmXChain/src/main/java/com/infosys/farmxchain/entity/OrderStatus.java
+	FarmXChain/src/main/java/com/infosys/farmxchain/entity/Shipment.java
+	FarmXChain/src/main/java/com/infosys/farmxchain/entity/ShipmentStatus.java
+	FarmXChain/src/main/java/com/infosys/farmxchain/repository/OrderRepository.java
+	FarmXChain/src/main/java/com/infosys/farmxchain/repository/ShipmentRepository.java
+	FarmXChain/src/main/java/com/infosys/farmxchain/service/LogisticsService.java
+	FarmXChain/src/main/java/com/infosys/farmxchain/service/OrderService.java
+	FarmXChain/uploads/3f47ddc5-8138-4c70-a083-7395bbb68a65.webp
+	PRESENTATION_SLIDES.md
+	PROJECT_DOCUMENTATION.md
+	frontend/src/pages/AdminOrders.jsx
+	frontend/src/pages/Orders.jsx
+	frontend/src/pages/Tracking.jsx
+	frontend/src/services/LogisticsService.js
+	frontend/src/services/OrderService.js
+	git_debug.txt
+	git_output.txt
+	out.txt
+	screenshots/admin transtitions.png
+	screenshots/sale hubs.png
+	screenshots/tracking.png
+
+no changes added to commit (use "git add" and/or "git commit -a")
+old-origin	git@github.com:its-vikash-Kushwaha/FarmXChain.git (fetch)
+old-origin	git@github.com:its-vikash-Kushwaha/FarmXChain.git (push)
+origin	https://github.com/its-vikash-Kushwaha/FarmXChain-finalProject.git (fetch)
+origin	https://github.com/its-vikash-Kushwaha/FarmXChain-finalProject.git (push)
+* main
+  remotes/old-origin/HEAD -> old-origin/master
+  remotes/old-origin/main
+  remotes/old-origin/master

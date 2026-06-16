@@ -1,0 +1,443 @@
+FarmXChain – Blockchain-Based Smart Agriculture Supply Chain Platform
+Introduction
+FarmXChain is a blockchain-enabled smart agriculture supply chain platform designed to
+bring transparency, traceability, and trust to the farm-to-fork ecosystem. The system
+connects farmers, distributors, retailers, and consumers on a single digital platform, ensuring
+fair pricing, real-time tracking, and immutable records of agricultural produce.
+By leveraging Blockchain, IoT, and full-stack web technologies, FarmXChain eliminates
+middlemen inefficiencies, prevents data tampering, and empowers farmers with better
+market access and insights.
+
+Overall Technology Stack
+Frontend
+•
+
+Angular 19 / React
+
+•
+
+TypeScript / JavaScript
+
+•
+
+Material UI / Tailwind CSS
+
+•
+
+Chart.js / NGX-Charts
+
+Backend
+•
+
+Java 17 + Spring Boot
+
+•
+
+Spring Security + JWT
+
+•
+
+RESTful APIs
+
+•
+
+Web3j (Blockchain interaction)
+
+Blockchain Layer
+•
+
+Ethereum / Polygon
+
+•
+
+Smart Contracts (Solidity)
+
+•
+
+Ganache / Hardhat (Development)
+
+Database
+•
+
+MySQL / PostgreSQL
+
+Optional Integrations
+•
+
+IoT Sensors (Temperature, Humidity)
+
+•
+
+IPFS (Document Storage)
+
+DevOps & Tools
+•
+
+Maven / Gradle
+
+•
+
+Docker
+
+•
+
+Postman
+
+•
+
+Git/GitHub
+
+Milestone 1: User Management & Farmer Onboarding
+Objective
+Build the foundational system for user authentication, onboarding, and role-based access
+across the agriculture supply chain.
+Functional Scope
+•
+
+Secure registration & login
+
+•
+
+Role-based access (Farmer, Distributor, Retailer, Consumer, Admin)
+
+•
+
+Farmer profile & land details
+
+Features Implemented
+Authentication & Authorization
+•
+
+JWT-based login & registration
+
+•
+
+Password encryption (BCrypt)
+
+•
+
+Role-based dashboard access
+
+Farmer Onboarding
+•
+
+Farmer profile creation
+
+•
+
+Farm location & crop details
+
+•
+
+Bank & payment details (optional)
+
+Admin Controls
+•
+
+Farmer verification & approval
+
+•
+
+User management
+
+Backend Components
+
+•
+
+AuthController
+
+•
+
+UserController
+
+•
+
+FarmerService
+
+Database Tables
+•
+
+Users (id, name, email, role, status)
+
+•
+
+Farmers (id, user_id, farm_location, crop_type)
+
+Expected Output
+•
+
+Secure login & dashboards
+
+•
+
+Verified farmer onboarding flow
+
+Milestone 2: Crop Listing & Blockchain Traceability
+Objective
+Enable transparent crop listing and immutable tracking using blockchain technology.
+Functional Scope
+•
+
+Crop listing & lifecycle tracking
+
+•
+
+Blockchain record creation
+
+•
+
+Smart contract integration
+
+Features Implemented
+Crop Management
+•
+
+Farmers add crop details (type, quantity, harvest date)
+
+•
+
+Upload quality certificates
+
+Blockchain Traceability
+•
+
+Each crop batch registered on blockchain
+
+•
+
+Immutable records for:
+o
+
+Origin
+
+o
+
+Harvest date
+
+o
+
+Quality data
+
+Smart Contracts
+
+•
+
+Crop registration contract
+
+•
+
+Ownership tracking
+
+Backend Components
+•
+
+CropController
+
+•
+
+BlockchainService
+
+•
+
+Smart Contract APIs
+
+Database Tables
+•
+
+Crops (id, farmer_id, crop_name, quantity, blockchain_hash)
+
+Expected Output
+•
+
+Blockchain-backed crop listings
+
+•
+
+Tamper-proof traceability records
+
+Milestone 3: Supply Chain Transactions & Logistics Tracking
+Objective
+Digitize and automate agricultural supply chain transactions with real-time tracking.
+Functional Scope
+•
+
+Buying & selling of crops
+
+•
+
+Logistics & transport tracking
+
+•
+
+Ownership transfer on blockchain
+
+Features Implemented
+Transactions
+•
+
+Buyers place purchase requests
+
+•
+
+Farmers accept orders
+
+•
+
+Smart contract-based ownership transfer
+
+Logistics Tracking
+•
+
+Shipment status updates
+
+•
+
+Temperature & humidity logging (IoT-ready)
+
+Payments (Optional)
+
+•
+
+Digital payments integration
+
+•
+
+Blockchain-based transaction proof
+
+Backend Components
+•
+
+OrderController
+
+•
+
+LogisticsService
+
+•
+
+PaymentService
+
+Database Tables
+•
+
+Orders (id, crop_id, buyer_id, status)
+
+•
+
+Shipments (id, order_id, location, condition_data)
+
+Expected Output
+•
+
+End-to-end supply chain visibility
+
+•
+
+Secure transaction records
+
+Milestone 4: Analytics, Consumer Transparency & Admin Governance
+Objective
+Provide insights, analytics, and governance for all stakeholders.
+Functional Scope
+•
+
+Analytics dashboards
+
+•
+
+Consumer product traceability
+
+•
+
+Admin monitoring & reports
+
+Features Implemented
+Consumer Transparency
+•
+
+QR code scan to view full crop journey
+
+•
+
+Blockchain verification screen
+
+Analytics Dashboard
+•
+
+Farmer income analytics
+
+•
+
+Crop demand & pricing trends
+
+•
+
+Supply chain performance metrics
+
+Admin Governance
+•
+
+Dispute management
+
+•
+
+System-wide reports
+
+•
+
+User & contract monitoring
+
+Backend Components
+•
+
+AnalyticsController
+
+•
+
+AdminController
+
+•
+
+ReportService
+
+Database Tables
+•
+
+Reports (id, type, generated_date)
+
+Expected Output
+•
+
+Data-driven agriculture insights
+
+•
+
+Transparent farm-to-fork ecosystem
+
+Final Outcome
+FarmXChain delivers a secure, transparent, and decentralized agriculture supply chain
+platform that empowers farmers, builds consumer trust, and modernizes agricultural
+commerce using blockchain technology.
+
+Future Enhancements
+•
+
+AI-based crop price prediction
+
+•
+
+Satellite & IoT integration
+
+•
+
+Smart insurance for crops
+
+•
+
+Mobile app (Flutter)
+
+•
+
+DAO-based farmer cooperatives
+
+

@@ -1,0 +1,19 @@
+<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Rounded Square Background -->
+  <rect width="100" height="100" rx="24" fill="#10A342"/>
+  
+  <!-- Sprout Icon -->
+  <g stroke="white" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Main Stem -->
+    <path d="M50 75C50 75 50 60 50 50C50 40 55 35 60 30" />
+    
+    <!-- Left Leaf -->
+    <path d="M50 55C40 55 32 48 32 40C32 32 40 32 50 45" fill="none" />
+    
+    <!-- Right Leaf -->
+    <path d="M52 48C62 48 70 40 70 32C70 24 62 24 52 38" fill="none" />
+    
+    <!-- Soil Line (Optional, matches image structure) -->
+    <path d="M30 75H70" stroke-width="4" opacity="0.8" />
+  </g>
+</svg>

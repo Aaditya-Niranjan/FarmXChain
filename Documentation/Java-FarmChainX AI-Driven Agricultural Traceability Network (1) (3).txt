@@ -1,0 +1,159 @@
+Project Title:
+FarmChainX – AI-Powered Farm Product Traceability System
+
+Project Statement:
+FarmChainX is a blockchain-inspired, AI-enabled platform that ensures transparent
+traceability of agricultural products from farm to fork. The system uses AI for anomaly
+detection, predictive quality scoring, and integrates QR-based tracking for stakeholders
+such as farmers, distributors, and consumers. Built using Spring Boot, Angular 19, and
+MySQL, it offers role-based dashboards for real-time product visibility, ensuring food
+safety, authenticity, and quality assurance in the agriculture supply chain.
+
+Module-Wise Implementation with Features & Expected Output
+1. User & Role Management
+Roles: Farmer, Distributor, Retailer, Consumer, Admin
+
+Services:
+•
+•
+
+Register/Login
+Role-based navigation and permissions
+
+Expected Output:
+•
+•
+
+Login/Register page with dropdown for role
+Separate dashboards (e.g., Farmer sees upload form; Consumer sees product
+info)
+
+2. Farm Product Upload & Metadata Collection (Farmer)
+Services:
+•
+•
+•
+
+Add new product (crop, fruit, etc.)
+Capture metadata (crop type, soil type, pesticides used, harvest date)
+Upload image & GPS location
+
+Expected Output:
+•
+•
+•
+
+Form with fields and file uploader
+Location capture using Google Maps API
+Confirmation message upon submission
+
+3. QR Code Generation & Assignment
+Services:
+•
+•
+•
+
+Generate unique QR for each product batch
+Encode batch metadata in QR
+Assign QR to product ID
+
+Expected Output:
+•
+•
+
+Downloadable QR image with tracking link
+QR preview page with share option
+
+4. AI Quality Scoring Module
+Services:
+•
+•
+
+Upload product image for AI-based quality prediction
+Use ML model to classify grades (A, B, C)
+
+•
+
+Show confidence % of prediction
+
+Expected Output:
+•
+•
+
+Image preview + Predicted quality
+Progress bar showing prediction accuracy
+
+5. Supply Chain Tracking & Handover (Distributors & Retailers)
+Services:
+•
+•
+•
+
+Accept product batch via QR scan
+Update transport, storage, and handover logs
+View product history timeline
+
+Expected Output:
+•
+•
+
+Timeline UI showing chain of custody
+Log update page for tracking events
+
+6. Consumer Product Verification Portal
+Services:
+•
+•
+•
+
+Scan QR to view full product journey
+View quality rating, location, and farmer info
+Submit feedback/rating
+
+Expected Output:
+•
+•
+
+Journey visual with maps and timeline
+Product details with rating & comment box
+
+Layer
+
+Technology
+
+Frontend
+
+Angular 19, QR Scanner
+
+Backend
+
+Spring Boot, REST APIs, Spring Security
+
+AI Module
+
+Python Flask API / TensorFlow model
+
+Database
+
+MySQL with Hibernate JPA
+
+Extras
+
+QR Code Generator, Google Maps API
+
+DevOps
+
+Postman, GitHub
+
+Charts
+
+Chart.js / ApexCharts / Recharts
+
+Other APIs
+
+Email (SMTP), WebSocket for live
+updates
+
+Expected outputs:
+
+
