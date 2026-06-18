@@ -17,6 +17,6 @@ public class OpenApiConfig {
                         .title("FarmXChain API")
                         .version("1.0")
                         .description("API documentation for FarmXChain application"))
-                .addServersItem(new Server().url("http://localhost:8080/api/v1"));
+                .addServersItem(new Server().url("https://farmxchain-1.onrender.com/api/v1"));
     }
 }
