@@ -93,6 +93,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
 
                     SecurityContextHolder.getContext()
                             .setAuthentication(authenticationToken);
+
                 } else {
                     System.out.println("User not found in database");
                 }
@@ -105,10 +106,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
 
             ex.printStackTrace();
 
-            logger.error(
-                    "Cannot set user authentication: {}",
-                    ex.getMessage()
-            );
+            logger.error("Cannot set user authentication", ex);
         }
 
         filterChain.doFilter(request, response);
