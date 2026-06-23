@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'http://localhost:8080/api/v1';
+const API_BASE_URL = 'https://farmxchain-1.onrender.com/api/v1';
 
 class AuthService {
   async login(credentials) {
@@ -18,9 +18,16 @@ class AuthService {
 
       return response.data;
     } catch (error) {
-      console.error('Login error:', error.response?.data || error.message);
-      throw error.response?.data?.message || error.message;
-    }
+  console.error("FULL ERROR:", error);
+  console.error("RESPONSE:", error.response);
+  console.error("DATA:", error.response?.data);
+
+  throw new Error(
+    error.response?.data?.message ||
+    error.message ||
+    "Login failed"
+  );
+}
   }
 
   async validateToken() {
