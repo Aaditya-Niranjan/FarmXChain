@@ -4,18 +4,11 @@ import LogisticsService from '../services/LogisticsService';
 
 const Tracking = () => {
     const { orderId } = useParams();
-    const user = JSON.parse(localStorage.getItem('user'));
-    const isFarmer = user?.role === 'FARMER';
     const [shipment, setShipment] = useState(null);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState('');
-    const [updateForm, setUpdateForm] = useState({
-        location: '',
-        temperature: 20,
-        humidity: 60,
-        status: 'IN_TRANSIT'
-    });
-    const [updating, setUpdating] = useState(false);
+    
+
 
     useEffect(() => {
         loadShipment();
@@ -26,14 +19,7 @@ const Tracking = () => {
             setLoading(true);
             const response = await LogisticsService.getShipmentByOrder(orderId);
             setShipment(response.data);
-            if (response.data) {
-                setUpdateForm({
-                    location: response.data.currentLocation || '',
-                    temperature: response.data.temperature || 20,
-                    humidity: response.data.humidity || 60,
-                    status: response.data.status
-                });
-            }
+         
         } catch (err) {
             setError('Shipment tracking information not found.');
             console.error(err);
@@ -42,18 +28,6 @@ const Tracking = () => {
         }
     };
 
-    const handleUpdate = async (e) => {
-        e.preventDefault();
-        try {
-            setUpdating(true);
-            await LogisticsService.updateShipment(shipment.id, updateForm);
-            await loadShipment();
-        } catch (err) {
-            setError('Failed to update shipment');
-        } finally {
-            setUpdating(false);
-        }
-    };
 
     const getStepStatus = (step) => {
         const statuses = ['IN_TRANSIT', 'DELAYED', 'DELIVERED'];
