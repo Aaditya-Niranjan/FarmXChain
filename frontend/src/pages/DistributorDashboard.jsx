@@ -3,7 +3,7 @@ import DistributorService from '../services/DistributorService';
 
 const DistributorDashboard = () => {
     const [orders, setOrders] = useState([]);
-    const [filteredOrders, setFilteredOrders] = useState([]);
+    const [filteredOrders] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState('');
     const [success, setSuccess] = useState('');
@@ -113,25 +113,7 @@ useEffect(() => {
         }
     };
 
-    const filterOrders = () => {
-        let filtered = [];
-        switch (activeTab) {
-            case 'assigned':
-                filtered = orders.filter(o => o.status === 'ASSIGNED');
-                break;
-            case 'in-transit':
-                filtered = orders.filter(o => o.status === 'IN_TRANSIT');
-                break;
-            case 'delivered':
-                filtered = orders.filter(o => o.status === 'DELIVERED');
-                break;
-            case 'all':
-            default:
-                filtered = orders;
-        }
-        setFilteredOrders(filtered);
-    };
-
+  
     const handleCreateShipment = async (e) => {
         e.preventDefault();
         try {
