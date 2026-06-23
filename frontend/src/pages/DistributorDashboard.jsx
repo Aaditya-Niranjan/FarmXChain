@@ -15,7 +15,7 @@ const DistributorDashboard = () => {
     const [showDelivery, setShowDelivery] = useState(false);
     const [showLogs, setShowLogs] = useState(false);
 
-    const [selectedOrder, setSelectedOrder] = useState(null);
+    const [, setSelectedOrder] = useState(null);
     const [selectedShipment, setSelectedShipment] = useState(null);
     const [shipmentLogs, setShipmentLogs] = useState([]);
 
@@ -40,13 +40,16 @@ const DistributorDashboard = () => {
         deliveryNotes: ''
     });
 
-    useEffect(() => {
-        fetchOrders();
-    }, []);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+useEffect(() => {
+    fetchOrders();
+}, []);
 
-    useEffect(() => {
-        filterOrders();
-    }, [activeTab, orders]);
+    
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+useEffect(() => {
+    filterOrders();
+}, [activeTab, orders]);
 
     const fetchOrders = async () => {
         try {

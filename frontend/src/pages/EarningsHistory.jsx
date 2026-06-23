@@ -5,7 +5,7 @@ const EarningsHistory = () => {
     const [orders, setOrders] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState('');
-    const user = JSON.parse(localStorage.getItem('user'));
+    
 
     useEffect(() => {
         fetchOrders();
