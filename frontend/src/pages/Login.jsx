@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import AuthService from '../services/AuthService';
 import Logo from '../components/Logo';
 
@@ -103,9 +103,12 @@ const Login = () => {
 
             <div className="flex items-center justify-between">
               <div className="text-sm">
-                <a href="#" className="font-medium text-primary-600 hover:text-primary-500">
-                  Forgot password?
-                </a>
+                <button
+  type="button"
+  className="font-medium text-primary-600 hover:text-primary-500"
+>
+  Forgot password?
+</button>
               </div>
             </div>
 

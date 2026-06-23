@@ -46,10 +46,10 @@ useEffect(() => {
 }, []);
 
     
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+ // eslint-disable-next-line react-hooks/exhaustive-deps
 useEffect(() => {
-    filterOrders();
-}, [activeTab, orders]);
+    fetchOrders();
+}, []);
 
     const fetchOrders = async () => {
         try {

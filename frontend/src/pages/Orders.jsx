@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import OrderService from '../services/OrderService';
-import LogisticsService from '../services/LogisticsService';
+
 import FarmerService from '../services/FarmerService';
 import AuthService from '../services/AuthService';
 import { Link } from 'react-router-dom';
@@ -21,12 +21,15 @@ const Orders = () => {
     const [selectedOrder, setSelectedOrder] = useState(null);
     const [selectedDistributor, setSelectedDistributor] = useState('');
 
-    useEffect(() => {
-        loadOrders();
-        if (isFarmer) {
-            loadDistributors();
-        }
-    }, []);
+   useEffect(() => {
+    loadOrders();
+
+    if (isFarmer) {
+        loadDistributors();
+    }
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+}, []);
 
     const loadOrders = async () => {
         try {
@@ -99,22 +102,7 @@ const Orders = () => {
         }
     };
 
-    const handleStartShipment = async (orderId) => {
-        try {
-            setError('');
-            setSuccess('');
-            setStatusUpdating(orderId);
-            await LogisticsService.startShipment(orderId);
-            await AuthService.getProfile(); // Refresh balance
-            await loadOrders();
-            setSuccess('Shipment initiated successfully');
-        } catch (err) {
-            setError(err.message || 'Failed to start shipment');
-            console.error(err);
-        } finally {
-            setStatusUpdating(null);
-        }
-    };
+ 
 
     const getStatusColor = (status) => {
         switch (status) {
