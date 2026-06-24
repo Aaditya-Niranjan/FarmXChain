@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:8080/api/v1/distributor';
+const API_URL = 'https://farmxchain-1.onrender.com/api/v1/distributor';
 
 // Add auth token to all requests
 const getAuthHeader = () => {
@@ -83,7 +83,7 @@ class DistributorService {
     // Get shipment by order ID (from logistics service)
     async getShipmentByOrderId(orderId) {
         try {
-            const response = await axios.get(`http://localhost:8080/api/v1/logistics/order/${orderId}`, {
+            const response = await axios.get(`https://farmxchain-1.onrender.com/api/v1/logistics/order/${orderId}`, {
                 headers: getAuthHeader()
             });
             return response.data;
